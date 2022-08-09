@@ -8,8 +8,8 @@ candidato1 = new Candidato(2222,"Jose","Esportes");
 console.log(candidato1);
 
 function votar(id) {
-    let voto = id;
-    if(voto == candidato1.id) {
+    
+    if(id == 2222) {
        return `Votou em ${candidato1.nome}`
     }else{
         return `Candidato não encontrado!`
