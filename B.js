@@ -1,11 +1,19 @@
-console.log("Testando o git");
-
-//let nome = prompt("Informe seu nome"
-
-function calculadora(numero1,numero2,callback) {
-    return `O Resultdo da operação é: ${callback(numero1,numero2)}`
+function Candidato(id,nome,partido) {
+    this.id = id;
+    this.nome = nome;
+    this.partido = partido;
 };
 
-somar = (numero1,numero2) => numero1 + numero2
+candidato1 = new Candidato(2222,"Jose","Esportes");
+console.log(candidato1);
 
-console.log(calculadora(8,8,somar))
+function votar(id) {
+    let voto = id;
+    if(voto == candidato1.id) {
+       return `Votou em ${candidato1.nome}`
+    }else{
+        return `Candidato não encontrado!`
+    }
+}
+
+console.log(votar(2222));
